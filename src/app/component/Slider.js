@@ -1,11 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Pause, Play } from "lucide-react";
 import Image from 'next/image'
 
 
-// Main slides configuration
 const mainSlides = [
-  // First slide - Text only
   {
     id: 1,
     type: "text",
@@ -13,7 +10,6 @@ const mainSlides = [
     subtitle: "",
     description: ""
   },
-  // Video slides - each with multiple video options
   {
     id: 2,
     type: "video",
@@ -177,7 +173,6 @@ export default function MultiVideoSlider() {
   const handleVideoPlay = () => setIsPlaying(true);
   const handleVideoPause = () => setIsPlaying(false);
 
-  // Get current video info
   const currentVideoIndex = activeVideoIndices[currentMainSlide] || 0;
   const currentVideo = currentSlide.type === "video" ?
     currentSlide.navigationOptions[currentVideoIndex] : null;
@@ -187,18 +182,15 @@ export default function MultiVideoSlider() {
       className="relative w-full h-screen bg-black flex flex-col items-center justify-center cursor-pointer overflow-hidden"
       onClick={handleMainSlideClick}
     >
-      {/* Main slide counter */}
       <div className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 text-white/60 font-inter text-xs sm:text-sm z-50">
         {currentMainSlide + 1} / {mainSlides.length}
       </div>
 
-      {/* Content based on slide type */}
       <div
         className={`transition-all duration-500 ease-in-out transform w-full h-full ${isTransitioning ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
           }`}
       >
         {currentSlide.type === "text" ? (
-          // Text slide layout (original)
           <div className="flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tight sm:tracking-[-0.12px] lg:tracking-[-0.24px] max-w-[90vw] sm:max-w-[80vw] lg:max-w-[778px] font-manrope mb-4 sm:mb-6 leading-tight">
               <span className="font-light text-white">Evolving the drive with </span>
@@ -207,9 +199,7 @@ export default function MultiVideoSlider() {
             </h1>
           </div>
         ) : (
-          // Video slide layout (like Video component)
           <div className="relative w-full h-full">
-            {/* Top Heading */}
             <div className="absolute w-full  mx-auto top-6 md:top-16 lg:top-20 left-1/2 -translate-x-1/2 px-4 md:px-8 z-40">
               <h1 className="font-manrope text-2xl md:text-4xl lg:text-5xl  text-center tracking-tight leading-tight text-white">
                 <span className="font-light">Evolving the drive with </span>
@@ -270,10 +260,10 @@ export default function MultiVideoSlider() {
                       </div>
                     </div>
 
-                  
 
 
-                    <div className=" flex flex-wrap justify-center items-center gap-3 md:gap-6">
+
+                    <div className="flex flex-wrap justify-center items-center gap-3 md:gap-6">
                       {currentSlide.navigationOptions?.map((option, index) => (
                         <div
                           key={index}
@@ -284,14 +274,15 @@ export default function MultiVideoSlider() {
                           <Image
                             src={option.image}
                             alt={option.label || `Thumbnail ${index + 1}`}
-                            width={130}
-                            height={130}
-                            className=" brightness-110"
+                            width={125} // Largest size
+                            height={125}
+                            className="w-[60px] h-[60px] md:w-[125px] md:h-[125px] brightness-110"
                           />
-                          
+
                         </div>
                       ))}
                     </div>
+
 
 
                   </div>
@@ -303,8 +294,7 @@ export default function MultiVideoSlider() {
         )}
       </div>
 
-      {/* Instructions */}
-      <div className="absolute bottom-20  sm:bottom-24 lg:bottom-[20px] text-center font-inter text-sm sm:text-base lg:text-[17.8px] text-white/50 tracking-tight lg:tracking-[-0.09px] px-4 z-40">
+      <div className="absolute bottom-[6px]  sm:bottom-24 lg:bottom-[20px] text-center font-inter text-sm sm:text-base lg:text-[17.8px] text-white/50 tracking-tight lg:tracking-[-0.09px] px-4 z-40">
         <span className="block sm:inline">
           {currentSlide.type === "text"
             ? "Click anywhere for video experience"
@@ -316,7 +306,6 @@ export default function MultiVideoSlider() {
         </span>
       </div>
 
-      {/* Main slide dot navigation */}
       <div className="absolute bottom-12 sm:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2 z-40">
         {mainSlides.map((_, index) => (
           <div
