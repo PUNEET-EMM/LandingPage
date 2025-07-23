@@ -27,7 +27,7 @@ export const Footer = () => {
         <div className="h-[69px] bg-white"></div>
 
         <div className="relative  min-h-[544px] px-8 py-12">
-          <div className="absolute top-0 right-[-300px] w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-0  right-0 md:right-[-300px] w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[111px] right-0 w-[809px] h-[794px] opacity-10">
               <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-800 rounded-full transform rotate-12"></div>
               <div className="absolute top-[103px] left-[197px] w-[424px] h-[582px] bg-gradient-to-tl from-blue-300 to-blue-700 rounded-full transform -rotate-6"></div>
