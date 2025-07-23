@@ -9,10 +9,10 @@ A responsive landing page implementation built with Next.js and Tailwind CSS for
 
 ## 🛠 Tech Stack
 
-- **Framework**: Next.js 14
+- **Framework**: Next.js 15
 - **Language**: JavaScript
 - **Styling**: Tailwind CSS
-- **Deployment**: Vercel/Netlify
+- **Deployment**: Vercel
 
 ## 🚀 Getting Started
 
