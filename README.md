@@ -5,7 +5,7 @@ A responsive landing page implementation built with Next.js and Tailwind CSS for
 ## 🚀 Live Demo
 
 - **GitHub Repository**: https://github.com/PUNEET-EMM/LandingPage.git
-- **Deployed URL**: [Add your deployment URL here]
+- **Deployed URL**: https://landing-page-five-sigma-66.vercel.app/
 
 ## 🛠 Tech Stack
 
