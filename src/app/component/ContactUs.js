@@ -1,13 +1,11 @@
 
 export const ContactUs = ()=>{
-  // Contact information data
   const contactInfo = [
     { label: "Address :", value: "110, 16th Road, Chembur, Mumbai – 400071" },
     { label: "Phone :", value: "+91 22 25208822" },
     { label: "Email :", value: "info@supremegroup.co.in" },
   ];
 
-  // Form fields data
   const formFields = [
     { id: "fullname", label: "Full name", type: "text" },
     { id: "email", label: "E-mail", type: "email" },
@@ -19,7 +17,6 @@ export const ContactUs = ()=>{
       <div className="w-full ml- bg-[#0067b1] rounded-[10px]">
         <div className="py-8 px-6 md:py-16 lg:py-[88px] md:px-12 lg:px-[132px]">
           <div className="flex flex-col justify-center lg:flex-row gap-8 md:gap-12 lg:gap-[150px]">
-            {/* Left column - Contact information */}
             <div className="flex flex-col  w-full lg:w-[418px] gap-6 md:gap-8 lg:gap-10">
               <div className="flex flex-col gap-3 md:gap-5">
                 <h1 className="font-['Manrope',Helvetica] font-semibold text-white text-3xl md:text-4xl lg:text-5xl leading-tight lg:leading-[38px]">
@@ -27,11 +24,10 @@ export const ContactUs = ()=>{
                 </h1>
               </div>
 
-              {/* Custom separator */}
               <div className="w-12 h-[3px] bg-white"></div>
 
               <div className="flex flex-col gap-6 md:gap-8 lg:gap-10">
-                <h2 className="font-['Manrope',Helvetica] font-normal text-white text-lg md:text-xl lg:text-2xl leading-6 lg:leading-7">
+                <h2 className="font-['Manrope',Helvetica] font-normal  text-slate-200 text-lg md:text-xl lg:text-2xl leading-6 lg:leading-7">
                   For general enquiries
                 </h2>
 
@@ -41,7 +37,7 @@ export const ContactUs = ()=>{
                       <span className="font-['Manrope',Helvetica] font-semibold text-white text-base md:text-lg lg:text-xl leading-4">
                         {item.label}
                       </span>
-                      <span className="font-['Manrope',Helvetica] font-normal text-white text-base md:text-lg lg:text-xl leading-5 lg:leading-4 break-words">
+                      <span className="font-['Manrope',Helvetica] font-normal text-slate-200 text-base md:text-lg lg:text-xl leading-5 lg:leading-4 break-words">
                         {item.value}
                       </span>
                     </div>
@@ -63,7 +59,7 @@ export const ContactUs = ()=>{
                     <input
                       id={field.id}
                       type={field.type}
-                      className="w-full max-w-full lg:w-[551px] bg-transparent border-0 border-b border-white focus:border-white focus:outline-none px-0 py-2 text-white placeholder:text-white/70 text-base md:text-lg lg:text-xl font-['Manrope',Helvetica]"
+                      className="w-full max-w-full lg:w-[551px] bg-transparent border-0 border-b border-slate-200 focus:border-white focus:outline-none px-0 py-2 text-white placeholder:text-white/70 text-base md:text-lg lg:text-xl font-['Manrope',Helvetica]"
                     />
                   </div>
                 ))}

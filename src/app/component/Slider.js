@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 import Image from 'next/image'
 
@@ -19,7 +20,7 @@ const mainSlides = [
       {
         label: "Complete Body",
         videoSrc: "/Passenger Alpha - Trim.mp4",
-        image: "/front.svg"
+        image: "/complete.svg"
       },
       {
         label: "Front",
@@ -30,13 +31,13 @@ const mainSlides = [
       {
         label: "Cabin",
         videoSrc: "/Cabin.mp4",
-        image: "/front.svg"
+        image: "/trunk.svg"
 
       },
       {
         label: "Trunk",
         videoSrc: "/Trunk.mp4",
-        image: "/front.svg"
+        image: "/exterior.svg"
 
       }
     ]
@@ -50,7 +51,7 @@ const mainSlides = [
       {
         label: "Complete Body",
         videoSrc: "/Commercial Alpha.mp4",
-        image: "/front.svg"
+        image: "/complete.svg"
 
       },
       {
@@ -62,13 +63,13 @@ const mainSlides = [
       {
         label: "Cabin",
         videoSrc: "/Cabin.mp4",
-        image: "/front.svg"
+        image: "/trunk.svg"
 
       },
       {
         label: "Trunk",
         videoSrc: "/Trunk.mp4",
-        image: "/front.svg"
+        image: "/exterior.svg"
 
       }
     ]
@@ -320,12 +321,10 @@ export default function MultiVideoSlider() {
         ))}
       </div>
 
-      {/* Transition overlay */}
       {isTransitioning && (
         <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 z-30" />
       )}
 
-      {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 pointer-events-none"></div>
     </div>
   );

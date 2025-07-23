@@ -2,7 +2,6 @@ import React from "react";
 import Image from 'next/image'
 
 export const Footer = () => {
-  // Footer navigation data
   const footerNavigation = [
     {
       title: "APPLICATIONS",
@@ -25,24 +24,19 @@ export const Footer = () => {
   return (
     <footer className="w-full max-w-[1920px] bg-white overflow-hidden mx-auto">
       <div className="relative">
-        {/* Top white section */}
         <div className="h-[69px] bg-white"></div>
 
-        {/* Main footer content */}
         <div className="relative  min-h-[544px] px-8 py-12">
-          {/* Decorative background elements */}
-          <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-[-300px] w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-[111px] right-0 w-[809px] h-[794px] opacity-10">
               <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-800 rounded-full transform rotate-12"></div>
               <div className="absolute top-[103px] left-[197px] w-[424px] h-[582px] bg-gradient-to-tl from-blue-300 to-blue-700 rounded-full transform -rotate-6"></div>
             </div>
           </div>
 
-          {/* Footer content container */}
           <div className="relative z-10 max-w-6xl mx-auto">
             <div className="flex flex-col gap-20">
-              {/* Logo */}
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex lg:justify-start">
                 <div className="w-[226px] h-[63px] bg-white rounded-lg flex">
                   <Image
                     src="/logo.svg"
@@ -54,7 +48,6 @@ export const Footer = () => {
                 </div>
               </div>
 
-              {/* Navigation columns */}
               <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-20">
                 {footerNavigation.map((section, index) => (
                   <div key={index} className="flex flex-col gap-3 sm:gap-5">
@@ -76,7 +69,6 @@ export const Footer = () => {
                 ))}
               </div>
 
-              {/* Copyright and address */}
               <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 pt-8 border-t border-black/20">
                 <div className="font-medium text-black/70 text-sm">
                   ©2023. All Rights Reserved.
